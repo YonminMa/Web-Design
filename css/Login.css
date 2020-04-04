@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: montserrat;
+}
+body{
+    background: linear-gradient(120deg,#3498db,#8e44ad);
+    min-height: 100vh; /* The current window is divided evenly into 100vh */
+}
+.form{
+    background-color: aliceblue;
+    position: absolute;
+    width: 360px;
+    height: 550px;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    /* word-spacing: 25px; */  /* The distance between words */
+    letter-spacing: 0.5px; /* The distance between characters */
+    font-size: 28px;
+    text-align: center;
+    margin-top: 75px;
+}
+.content{
+    position: absolute;
+    width: 275px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.txtb{
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #adadad;
+
+}
+.txtb input{
+    font-size: 17px;
+    letter-spacing: 0.7px;
+    width: 100%;
+    outline: none; /* Remove the border that appears when the input box is clicked */
+    border: none; /* Remove the border of the input box */
+    height: 30px;
+    padding-left: 5px; /* The effect of indentation */
+    background: none;
+}
+.txtb span::before{
+    position: absolute;
+    content: attr(data-placeholder);
+    color: #adadad;
+    /* border-bottom: 2px black; */
+    top: 15%;
+    left: 5px;
+    font-size: 14px;
+    z-index: -1; /* Prevent the gray Username from blocking the cursor */
+    transition: .5s;
+}
+.txtb span::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(100deg,rgb(174, 0, 255),rgb(46, 102, 207),rgb(183, 0, 255));
+    height: 2px;
+    width: 0%;
+    transition: .5s;
+}
+
+.focus + span::before {
+    top: -17px;
+}
+.focus + span::after{
+    width: 100%;
+}
+#submit{
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+    display: block;
+    border-radius: 3px;
+    width: 100%;
+    height: 45px;
+    color: whitesmoke;
+    background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
+    background-size: 200%;
+    cursor: pointer; /*When the mouse moves over the button, it is displayed as a small hand*/
+    outline: none;
+    transition: 0.5s;
+}
+#submit:hover{
+    background-position: right;
+}
+#submit:active{ /* When the button is clicked */
+    transition: .01s;
+    transform: scale(0.98,0.98);
+}
+
+.bottom-text{
+    position: relative;
+    color: rgb(39, 38, 38);
+    margin-top: 60px;
+    text-align: center;
+    font-size: 15px;
+}
+.bottom-text a{
+    outline: none;
+    color: rgb(9, 129, 241);
+    text-decoration: none; /* Remove the underscore for sign up */
+}
+.bottom-text a:hover{
+    color: rgb(7, 4, 212);
+}
