@@ -10,8 +10,8 @@ body{
 .form{
     background-color: aliceblue;
     position: absolute;
-    width: 360px;
-    height: 550px;
+    width: 468px;
+    height: 705px;
     border-radius: 10px;
     left: 50%;
     top: 50%;
@@ -22,14 +22,14 @@ h1{
     color: black;
     /* word-spacing: 25px; */  /* The distance between words */
     letter-spacing: 0.5px; /* The distance between characters */
-    font-size: 28px;
+    font-size: 35px;
     text-align: center;
-    margin-top: 75px;
+    margin-top: 25%;
 }
 .content{
     position: absolute;
-    width: 275px;
-    height: 300px;
+    width: 330px;
+    height: 315px;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
@@ -39,18 +39,17 @@ h1{
     display: block;
     width: 100%;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 65px;
     border-bottom: 2px solid #adadad;
-
 }
 .txtb input{
-    font-size: 17px;
+    font-size: 20px;
     letter-spacing: 0.7px;
     width: 100%;
     outline: none; /* Remove the border that appears when the input box is clicked */
     border: none; /* Remove the border of the input box */
     height: 30px;
-    padding-left: 5px; /* The effect of indentation */
+    padding-left: 5.5px; /* The effect of indentation */
     background: none;
 }
 .txtb span::before{
@@ -60,7 +59,7 @@ h1{
     /* border-bottom: 2px black; */
     top: 15%;
     left: 5px;
-    font-size: 14px;
+    font-size: 16px;
     z-index: -1; /* Prevent the gray Username from blocking the cursor */
     transition: .5s;
 }
@@ -68,13 +67,25 @@ h1{
     content: '';
     position: absolute;
     background: linear-gradient(100deg,rgb(174, 0, 255),rgb(46, 102, 207),rgb(183, 0, 255));
+    background-size: 200%;
+    animation: input_bottom 3s;
+    animation-iteration-count: infinite;
     height: 2px;
     width: 0%;
     transition: .5s;
 }
 
+@keyframes input_bottom
+{
+	0%   {background-position: center;}
+    25%  {background-position: right;}
+    50% {background-position: center;}
+    75% {background-position: left;}
+    100% {background-position: center;}
+}
+
 .focus + span::before {
-    top: -17px;
+    top: -20px;
 }
 .focus + span::after{
     width: 100%;
@@ -82,13 +93,14 @@ h1{
 #submit{
     text-decoration: none;
     text-align: center;
-    font-size: 14px;
-    line-height: 40px;
+    font-size: 17px;
+    line-height: 45px;
     display: block;
     border-radius: 3px;
     width: 100%;
-    height: 45px;
+    height: 50px;
     color: whitesmoke;
+    margin-top: 88px;
     background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
     background-size: 200%;
     cursor: pointer; /*When the mouse moves over the button, it is displayed as a small hand*/
@@ -108,7 +120,7 @@ h1{
     color: rgb(39, 38, 38);
     margin-top: 60px;
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
 }
 .bottom-text a{
     outline: none;
