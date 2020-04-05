@@ -66,7 +66,7 @@ h1{
 .txtb span::after{
     content: '';
     position: absolute;
-    background: linear-gradient(100deg,rgb(174, 0, 255),rgb(46, 102, 207),rgb(183, 0, 255));
+    background: linear-gradient(100deg,rgb(197, 70, 255), rgb(60, 125, 245),rgb(189, 47, 255));
     background-size: 200%;
     animation: input_bottom 3s;
     animation-iteration-count: infinite;
@@ -77,11 +77,8 @@ h1{
 
 @keyframes input_bottom
 {
-	0%   {background-position: center;}
-    25%  {background-position: right;}
-    50% {background-position: center;}
-    75% {background-position: left;}
-    100% {background-position: center;}
+	0%   {background-position: 200%;}
+    100%  {background-position: 0%;}
 }
 
 .focus + span::before {
