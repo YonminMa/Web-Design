@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #000;
+        }
+        a{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 200px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            color: #fff;
+            font-size: 24px;
+            text-transform: uppercase;
+            text-decoration: none; /* 去除下划线 */
+            font-family: sans-serif;
+            /* 
+                border-box	
+                为元素设定的宽度和高度决定了元素的边框盒。
+                就是说，为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。
+                通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。
+            */
+            box-sizing: border-box;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4 );
+            background-size: 400%;
+            border-radius: 30px;
+            outline: none;
+        }
+        a:hover{
+            color: #fff;
+            animation: animation 8s linear infinite;
+        }
+        @keyframes animation{
+            0%
+            {
+                background-position: 0%;
+            }
+            100%
+            {
+                background-position: 400%;
+            }
+        }
+        a::before{
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            z-index: -1;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4 );
+            background-size: 400%;
+            border-radius: 40px;
+            filter: blur(20px); /* 发光效果 */
+            opacity: 0; /* 设置元素透明度，0为透明，1为完全不透明 */
+            transition: .5s;
+        }
+        a:hover::before{
+            filter: blur(20px);
+            opacity: 1;
+            animation: animation 8s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">Button</a>
+</body>
+</html>
