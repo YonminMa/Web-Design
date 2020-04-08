@@ -19,7 +19,7 @@ HTML，CSS，JQuery
 # 页面介绍
 ## Login
 不错的登录页面，有许多动态的细节效果
-![Login](imgs\\Login.png)
+<img src=imgs\\Login.png>
 ## Button
 炫酷的按钮，鼠标悬浮上时有特效
-![Button](imgs\\Button.png)
+<img src=imgs\\Button.png>
