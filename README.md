@@ -23,3 +23,5 @@ HTML，CSS，JQuery
 ## Button
 炫酷的按钮，鼠标悬浮上时有特效
 <img src=imgs\\Button.png>
+404错误页面
+<img src=imgs\\404.png>
