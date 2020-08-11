@@ -28,7 +28,7 @@ body{
 }
 .content h1{
     position: relative;
-    font-size: 18vw;
+    font-size: 17vw;
     line-height: 1em;
 }
 .content h1:after{
